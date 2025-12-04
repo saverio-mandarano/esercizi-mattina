@@ -25,17 +25,26 @@
 //versione con for
 let sum = 0;
 for (let i=0; i<5; i++) {
-    sum += parseFloat(prompt(`inserisci un numero`));
+    let number = parseFloat(prompt(`inserisci un numero`));
+
+    while (isNaN(number)){
+        number = parseFloat(prompt(`inserire numero VALIDO`));
+    }
+    sum += number;
 }
 console.log(`la somma (con FOR) dei numeri è: ${sum}`);
-alert(`la somma è: ${sum}`);
+alert(`la somma (con FOR) è: ${sum}`);
 
 //versione con while
-sum =0;
+sum = 0;
 let i=0;
 while (i < 5){
-    sum += parseFloat(prompt(`inserisci un numero`));
+    let number = parseFloat(prompt(`inserisci un numero`));
+    while (isNaN(number)){
+        number = parseFloat(prompt(`inserire numero VALIDO`));
+    }
+    sum += number;
     i++;
 }
 console.log(`la somma (con WHILE) dei numeri è: ${sum}`);
-alert(`la somma è: ${sum}`);
+alert(`la somma (con WHILE) è: ${sum}`);
