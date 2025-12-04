@@ -27,9 +27,10 @@ let sum = 0;
 for (let i=0; i<5; i++) {
     let number = parseFloat(prompt(`inserisci un numero`));
 
-    while (isNaN(number)){
+    while (isNaN(number)){ //check
         number = parseFloat(prompt(`inserire numero VALIDO`));
     }
+    
     sum += number;
 }
 console.log(`la somma (con FOR) dei numeri è: ${sum}`);
@@ -40,9 +41,11 @@ sum = 0;
 let i=0;
 while (i < 5){
     let number = parseFloat(prompt(`inserisci un numero`));
-    while (isNaN(number)){
+
+    while (isNaN(number)){ //check
         number = parseFloat(prompt(`inserire numero VALIDO`));
     }
+
     sum += number;
     i++;
 }
